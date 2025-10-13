@@ -1,0 +1,1 @@
+savedcmd_/home/pi/Desktop/LinuxKernel/02_different_hello/hello.mod := printf '%s\n'   hello.o | awk '!x[$$0]++ { print("/home/pi/Desktop/LinuxKernel/02_different_hello/"$$0) }' > /home/pi/Desktop/LinuxKernel/02_different_hello/hello.mod

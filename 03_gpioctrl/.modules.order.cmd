@@ -1,0 +1,1 @@
+savedcmd_/home/pi/Desktop/LinuxKernel/02_different_hello/modules.order := {   echo /home/pi/Desktop/LinuxKernel/02_different_hello/hello.o; :; } > /home/pi/Desktop/LinuxKernel/02_different_hello/modules.order
