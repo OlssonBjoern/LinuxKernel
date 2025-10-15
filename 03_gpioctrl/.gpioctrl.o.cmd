@@ -967,6 +967,10 @@ deps_/home/pi/Desktop/LinuxKernel/03_gpioctrl/gpioctrl.o := \
     $(wildcard include/config/HAVE_MOD_ARCH_SPECIFIC) \
     $(wildcard include/config/MODULES_USE_ELF_REL) \
     $(wildcard include/config/MODULES_USE_ELF_RELA) \
+  /usr/src/linux-headers-6.12.47+rpt-common-rpi/include/linux/gpio/consumer.h \
+    $(wildcard include/config/GPIOLIB) \
+    $(wildcard include/config/ACPI) \
+    $(wildcard include/config/GPIO_SYSFS) \
 
 /home/pi/Desktop/LinuxKernel/03_gpioctrl/gpioctrl.o: $(deps_/home/pi/Desktop/LinuxKernel/03_gpioctrl/gpioctrl.o)
 

@@ -1,13 +1,15 @@
 #include <linux/module.h>
 #include <linux/init.h>
-
+#include <linux/gpio/consumer.h>
 
 static struct gpio_desc *led, *button;
 
 #define IO_LED 21
 #define IO_BUTTON 20
 
-#define IO_OFFSET 
+// Offset is found through cd/sys/class/gpio/
+// cat gpiochip of relevance and see the offset of that chip
+#define IO_OFFSET 512 
 
 // Callback functions for when the module is loaded in or out of the kernel
 // Static maked functions available locally
@@ -30,20 +32,20 @@ static int __init my_init(void) {
 	
 	}
 
-	status = gpio_direction_output(led, 0);
+	status = gpiod_direction_output(led, 0);
 	if(status) {
 		printk("gpioctrl - Error setting pin 20 to output\n");
 		return status;
 	}
 
-	status = gpio_direction_input(button);
+	status = gpiod_direction_input(button);
 	if(status) {
 		printk("gpioctrl - Error setting pin 21 to input\n");
 		return status;
 
 	}
 
-	gpio_set_value(led, 1);
+	gpiod_set_value(led, 1);
 
 	printk("gpioctrl - Button is %spressed\n", gpiod_get_value(button) ? "" : "not ");
 
@@ -54,7 +56,7 @@ static int __init my_init(void) {
 //Removing module from kernel
 static void __exit my_exit(void) {
   
-	gpio_set_value(led, 0);
+	gpiod_set_value(led, 0);
 	printk("gpioctrl - Turning light off, Good bye!\n");
 }
 
