@@ -1,0 +1,1 @@
+savedcmd_/home/pi/Desktop/LinuxKernel/03_gpioctrl/gpioctrl.mod := printf '%s\n'   gpioctrl.o | awk '!x[$$0]++ { print("/home/pi/Desktop/LinuxKernel/03_gpioctrl/"$$0) }' > /home/pi/Desktop/LinuxKernel/03_gpioctrl/gpioctrl.mod

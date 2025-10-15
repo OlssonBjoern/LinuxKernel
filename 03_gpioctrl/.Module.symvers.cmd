@@ -1,1 +1,1 @@
-savedcmd_/home/pi/Desktop/LinuxKernel/02_different_hello/Module.symvers :=  scripts/mod/modpost -M -m -a      -o /home/pi/Desktop/LinuxKernel/02_different_hello/Module.symvers -n -T /home/pi/Desktop/LinuxKernel/02_different_hello/modules.order -i Module.symvers -e 
+savedcmd_/home/pi/Desktop/LinuxKernel/03_gpioctrl/Module.symvers :=  scripts/mod/modpost -M -m -a      -o /home/pi/Desktop/LinuxKernel/03_gpioctrl/Module.symvers -n -T /home/pi/Desktop/LinuxKernel/03_gpioctrl/modules.order -i Module.symvers -e 
